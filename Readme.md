@@ -1,4 +1,4 @@
-#vzdump_s3
+#README
 
 ##Description
 vzdump_s3 is a bash script that handles your OpenVZ backup and sync it with Amazon S3. 
