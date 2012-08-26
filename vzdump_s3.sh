@@ -14,7 +14,7 @@
 #         NOTES:  ---
 #        AUTHOR:  Marc Juchli
 #       COMPANY:  Codag GmbH
-#       VERSION:  1.0.1
+#       VERSION:  1.0.2
 #       CREATED:  25/08/12 17:46:08 CEST
 #      REVISION:  https://github.com/mjnet/vzdump_s3
 #=======================================================================
@@ -22,7 +22,7 @@
 #-----------------------------------------------------------------------
 # CONFIGURATION
 #-----------------------------------------------------------------------
-SERVER="201" #USE EITHER SERVER "VID" OR "--all"
+SERVER="" #USE EITHER SERVER "VID" OR "--all"
 
 BACKUP_NAME="daily" #NAME OF THE BACKUP JOB
 BACKUP_COUNT=5 #NUMBER OF BACKUPS TO KEEP
@@ -31,6 +31,13 @@ BACKUP_PARAMETER="--suspend --compress --bwlimit 51200"
 BACKUP_BZIP2=0
 
 BUCKET_NAME=`hostname` #S3 BUCKET NAME
+
+#-----------------------------------------------------------------------
+# Allow $1 to set SERVER
+#-----------------------------------------------------------------------
+if [ $1 ]; then
+        SERVER=$1
+fi
 
 #-----------------------------------------------------------------------
 # MAKE A DIRECTORY STRUCTURE
