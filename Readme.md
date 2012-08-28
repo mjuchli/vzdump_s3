@@ -57,7 +57,7 @@ This is the root of your backup location (local)
 	BACKUP_ROOT="/home/backup/vz/" #BACKUP DIRECTORY (USE "/" IN THE END)
 
 ####BACKUP_PARAMETER
-Here you can set "vzdump" specific parameter. **Expect of dumpdir!**
+Here you can set "vzdump" specific parameter. **Apart from dumpdir!**
 	
 	BACKUP_PARAMETER="--suspend --compress --bwlimit 51200"
 
