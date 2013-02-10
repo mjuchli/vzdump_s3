@@ -57,7 +57,7 @@ cd $BACKUP_FOLDER/
 #-----------------------------------------------------------------------
 # MAKE VZDUMP IN VID RELATED FOLDER OR GLOBAL FOLDER FOR --all
 #-----------------------------------------------------------------------
-vzdump $BACKUP_PARAMETER --dumpdir $BACKUP_FOLDER $SERVER
+/usr/sbin/vzdump $BACKUP_PARAMETER --dumpdir $BACKUP_FOLDER $SERVER
 
 #-----------------------------------------------------------------------
 # CHECK IF BUCKET ALREADY EXISTS
